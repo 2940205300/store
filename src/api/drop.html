@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="input" @keyup.enter="OK" />
+        <ul>
+            <li v-for="(item, index) in arr" :key="index">{{item}}<button @click="Drop(index)">删除</button></li>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+    //创建Vue实例,得到 ViewModel
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            arr: [
+                '吃饭', '睡觉', '运动'
+            ],
+            input: ''
+
+        },
+        methods: {
+            OK() {
+                this.arr.unshift(this.input);
+                this.input=""
+            },
+            Drop(index) {
+                this.arr.splice(index)
+            }
+        }
+    });
+</script>
+
+</html>
