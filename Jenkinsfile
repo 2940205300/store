@@ -4,13 +4,13 @@ pipeline {
 	//声明环境变量，方便后面使用
 	environment {
 	   repo_addr='registry.cn-hangzhou.aliyuncs.com'
-     repo_user='d2940205300'
-     repo_pass='twy528985211'
-     repo_repo='hh_hh/vue_demo'
+           repo_user='d2940205300'
+           repo_pass='twy528985211'
+           repo_repo='hh_hh/vue_demo'
 
 	}
   tools{
-    nodejs 'node'
+    nodejs 'node';
     {
 
     stages {
