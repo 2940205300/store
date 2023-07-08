@@ -2,7 +2,7 @@ module.exports = {
   lintOnSave: false, //eslint语法检查
   // 跨域
   devServer: {
-    host: 'localhost',
+    host: '139.9.71.244',
     port: 8080, //vue项目的端口
     proxy: {
       '/api': {
